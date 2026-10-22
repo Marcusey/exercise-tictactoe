@@ -35,7 +35,26 @@ if (squares[index] || calculateWinner(squares)) return;
     setXIsNext(!xIsNext);
   };
 
-  return (
+  const winner = calculateWinner(squares);
+const isDraw = !winner && squares.every(square => square !== null);
+
+let status: string;
+if (winner) {
+  status = `Winner: ${winner}`;
+} else if (isDraw) {
+  status = "It's a draw";
+} else {
+  status = `Next player: ${xIsNext ? "X" : "O"}`;
+}
+
+const handleReset = () => {
+  setSquares(Array(9).fill(null));
+  setXIsNext(true);
+};
+
+return (
+  <div>
+    <p className="status">{status}</p>
     <div className="board">
       {squares.map((value, index) => (
         <button
@@ -47,7 +66,9 @@ if (squares[index] || calculateWinner(squares)) return;
         </button>
       ))}
     </div>
-  );
+    <button onClick={handleReset}>Reset</button>
+  </div>
+);
 }
 
 export default Board;
