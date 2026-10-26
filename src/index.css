@@ -1,33 +1,23 @@
+
+:root {
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+  color: #49372D;
+  background: #F5EBDD;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  color: #111827;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #F5EBDD;
 }
 
-main {
-  text-align: center;
-  padding: 32px 16px;
+button {
+  font: inherit;
 }
 
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  gap: 8px;
-  justify-content: center;
-  margin: 16px 0;
-}
-
-.square {
-  width: 80px;
-  height: 80px;
-  font-size: 32px;
-  font-weight: 800;
-  border: 2px solid #D1D5DB;
-  border-radius: 8px;
-  background: #fff;
-  cursor: pointer;
-}
-
-.square:hover {
-  border-color: #4338CA;
+* {
+  box-sizing: border-box;
 }

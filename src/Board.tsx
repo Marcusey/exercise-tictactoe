@@ -58,7 +58,7 @@ return (
     <div className="board">
       {squares.map((value, index) => (
         <button
-          className="square"
+          className={`square ${value === "X" ? "x" : value === "O" ? "o" : ""}`}
           key={index}
           onClick={() => handleClick(index)}
         >
@@ -66,8 +66,8 @@ return (
         </button>
       ))}
     </div>
-    <button onClick={handleReset}>Reset</button>
-  </div>
+  <button className="reset-button" onClick={handleReset}>Reset</button>
+</div>
 );
 }
 

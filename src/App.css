@@ -1,0 +1,82 @@
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2.5rem;
+  color: #A6533C;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #49372D;
+  border: 2px solid #D8C2A8;
+  border-radius: 14px;
+  background: #FFF9F0;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #E1D0BC;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.square:hover {
+  background: #F0DDC6;
+  border-color: #C17B58;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #D8BDA1;
+}
+
+.square:focus-visible {
+  outline: 3px solid #A6533C;
+  outline-offset: 3px;
+}
+
+.square.x {
+  color: #A6533C;
+}
+
+.square.o {
+  color: #7B8050;
+}
+
+.reset-button {
+  padding: 10px 24px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #A6533C;
+  color: #FFF9F0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #85402F;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background: #85402F;
+  transform: translateY(-2px);
+}
+
+.reset-button:active {
+  transform: translateY(1px);
+}
