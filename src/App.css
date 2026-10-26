@@ -80,3 +80,37 @@ h1 {
 .reset-button:active {
   transform: translateY(1px);
 }
+
+.square.winner {
+  color: #FFF9F0;
+  background: #A6533C;
+  border-color: #A6533C;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.square.winner:hover {
+  background: #85402F;
+  border-color: #85402F;
+}
+
+.square.winning-square {
+  background: #85402F;
+  border-color: #6F3427;
+  box-shadow: 0 0 0 3px #D9A18D;
+}
+
+.status {
+  color: #85402F;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.status .x {
+  color: #A6533C;
+}
+
+.status .o {
+  color: #7B8050;
+}
